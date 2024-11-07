@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,40 +7,30 @@ namespace millionaire
     public class QuizScreen : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _question;
-        [SerializeField] private List<Answer> _answers;
+        [Space]
+        [SerializeField] private AnswerOption _answerA;
+        [SerializeField] private AnswerOption _answerB;
+        [SerializeField] private AnswerOption _answerC;
+        [SerializeField] private AnswerOption _answerD;
 
         public event Action<AnswerType> OnAnswerSelected;
         
-        public void ShowQuestions(QuestionData questionData)
+        public void ShowQuestionData(QuestionData questionData)
         {
             _question.text = questionData.Question;
-
-            foreach (var answer in _answers)
-            {
-                switch (answer.Type)
-                {
-                    case AnswerType.A:
-                        _answers[0].SetLabel(questionData.AnswerA);
-                        break;
-                    case AnswerType.B:
-                        _answers[1].SetLabel(questionData.AnswerB);
-                        break;
-                    case AnswerType.C:
-                        _answers[2].SetLabel(questionData.AnswerC);
-                        break;
-                    case AnswerType.D:
-                        _answers[3].SetLabel(questionData.AnswerD);
-                        break;
-                }
-            }
+            
+            _answerA.SetLabel(questionData.AnswerA);
+            _answerB.SetLabel(questionData.AnswerB);
+            _answerC.SetLabel(questionData.AnswerC);
+            _answerD.SetLabel(questionData.AnswerD);
         }
 
         private void Start()
         {
-            foreach (var answer in _answers)
-            {
-                answer.OnClicked += OnAnswerClicked;
-            }
+            _answerA.OnClicked += OnAnswerClicked;
+            _answerB.OnClicked += OnAnswerClicked;
+            _answerC.OnClicked += OnAnswerClicked;
+            _answerD.OnClicked += OnAnswerClicked;
         }
 
         private void OnAnswerClicked(AnswerType answerType) => OnAnswerSelected?.Invoke(answerType);

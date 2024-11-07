@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2417870491053452217}
   - component: {fileID: 5128077610314400769}
   m_Layer: 5
-  m_Name: Answer(A)
+  m_Name: AnswerOption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1f99b1bd724ae5996bd7a495b5de3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 0
-  _label: {fileID: 7721835888590623325}
   _button: {fileID: 5128077610314400769}
+  _label: {fileID: 7721835888590623325}
+  _type: 0
 --- !u!222 &3618686588904252851
 CanvasRenderer:
   m_ObjectHideFlags: 0

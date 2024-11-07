@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865920901462998401, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: m_Name
-      value: Answer(B)
+      value: AnswerOption(B)
       objectReference: {fileID: 0}
     - target: {fileID: 3933702820397653817, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: _type
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865920901462998401, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: m_Name
-      value: Answer(C)
+      value: AnswerOption(C)
       objectReference: {fileID: 0}
     - target: {fileID: 3933702820397653817, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: _type
@@ -1202,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865920901462998401, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: m_Name
-      value: Answer(D)
+      value: AnswerOption(D)
       objectReference: {fileID: 0}
     - target: {fileID: 3933702820397653817, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: _type
@@ -1280,11 +1280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _question: {fileID: 564525326}
-  _answers:
-  - {fileID: 1167547891}
-  - {fileID: 216208018}
-  - {fileID: 1017276922}
-  - {fileID: 1956039516}
+  _answerA: {fileID: 1167547891}
+  _answerB: {fileID: 216208018}
+  _answerC: {fileID: 1017276922}
+  _answerD: {fileID: 1956039516}
 --- !u!1 &2117202982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,8 +1330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _quizScreen: {fileID: 1994923131}
   _easyQuestions: {fileID: 11400000, guid: 1952e4eac8a29254d8bf2a396233813a, type: 2}
-  _middleQuestions: {fileID: 0}
-  _hardQuestions: {fileID: 0}
+  _middleQuestions: {fileID: 11400000, guid: 751c4fffddfb69c428495c5465a1f221, type: 2}
+  _hardQuestions: {fileID: 11400000, guid: 38d6855698471874cb3a7d9f77c2f779, type: 2}
 --- !u!1001 &2401059590060674742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1423,7 +1422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865920901462998401, guid: 7289701ee00619f429c9ba60fbeb2158, type: 3}
       propertyPath: m_Name
-      value: Answer(A)
+      value: AnswerOption(A)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,11 +14,8 @@ namespace millionaire
         
         private void Start()
         {
-            _currentQuestion = _easyQuestions.Questions[0];
-            _quizScreen.ShowQuestions(_currentQuestion);
-            
             _quizScreen.OnAnswerSelected += OnAnswerSelected;
-            
+            ShowNextQuestion();
         }
 
         private void OnAnswerSelected(AnswerType selectedAnswer)
@@ -31,6 +28,14 @@ namespace millionaire
             {
                 Debug.Log("Wrong!");
             }
+
+            ShowNextQuestion();
+        }
+
+        private void ShowNextQuestion()
+        {
+            _currentQuestion = _easyQuestions.Questions[Random.Range(0, _easyQuestions.Questions.Count)];
+            _quizScreen.ShowQuestionData(_currentQuestion);
         }
     }
 }
