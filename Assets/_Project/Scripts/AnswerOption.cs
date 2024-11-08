@@ -14,6 +14,8 @@ namespace millionaire
         
         public event Action<AnswerType> OnClicked;
         
+        public AnswerType Type => _type;
+        
         public void SetLabel(string label) => _label.text = label;
 
         public void ShowHint()

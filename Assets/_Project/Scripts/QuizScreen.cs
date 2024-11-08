@@ -26,10 +26,20 @@ namespace millionaire
         {
             _question.text = questionData.Question;
 
-            _answerA.SetLabel(questionData.AnswerA);
-            _answerB.SetLabel(questionData.AnswerB);
-            _answerC.SetLabel(questionData.AnswerC);
-            _answerD.SetLabel(questionData.AnswerD);
+            // _answerA.SetLabel(questionData.AnswerA);
+            // _answerB.SetLabel(questionData.AnswerB);
+            // _answerC.SetLabel(questionData.AnswerC);
+            // _answerD.SetLabel(questionData.AnswerD);
+        }
+        
+        public void ShowCorrectAnswer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowIncorrectAnswer()
+        {
+            throw new NotImplementedException();
         }
         
         public void ShowCorrect()
@@ -58,9 +68,9 @@ namespace millionaire
             result.ShowError();
         }
         
-        public void ShowFiftyFifty(AnswerType correctAnswer)
+        public void ShowFiftyFifty()
         {
-            ShowHint(correctAnswer);
+            // ShowHint(correctAnswer);
         }
 
         public void ShowHint(AnswerType correctAnswer)

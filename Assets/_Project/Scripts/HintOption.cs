@@ -12,6 +12,10 @@ namespace millionaire
         
         public event Action<HintType> OnClicked;
         
+        public HintType Type;
+
+        public void Disable() => _button.interactable = false;
+
         private void Start() => _button.onClick.AddListener(OnClick);
 
         private void OnClick() => OnClicked?.Invoke(_type);

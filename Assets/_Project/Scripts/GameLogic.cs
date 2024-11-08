@@ -22,7 +22,7 @@ namespace millionaire
 
         private void OnAnswerSelected(AnswerType selectedAnswer)
         {
-            if (selectedAnswer == _currentQuestion.RightAnswer)
+            if (selectedAnswer == _currentQuestion.CorrectAnswer)
             {
                 _quizScreen.ShowCorrect();
             }
@@ -38,11 +38,11 @@ namespace millionaire
         {
             if (hintType == HintType.FiftyFifty)
             {
-                _quizScreen.ShowFiftyFifty(_currentQuestion.RightAnswer);
+                // _quizScreen.ShowFiftyFifty(_currentQuestion.RightAnswer);
             }
             else
             {
-                _quizScreen.ShowHint(_currentQuestion.RightAnswer);
+                _quizScreen.ShowHint(_currentQuestion.CorrectAnswer);
             }
         }
 

@@ -1,19 +1,14 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace millionaire
 {
     public class Mediator : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
+        [SerializeField] private QuizScreen _quizScreen;
         
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        [Button] public void ShowCorrectAnswer() => _quizScreen.ShowCorrectAnswer();
+        [Button] public void ShowIncorrectAnswer() => _quizScreen.ShowIncorrectAnswer();
+        [Button] public void ShowFiftyFifty() => _quizScreen.ShowFiftyFifty();
     }
 }
