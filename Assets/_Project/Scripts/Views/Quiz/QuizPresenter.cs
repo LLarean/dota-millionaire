@@ -1,3 +1,7 @@
+using System;
+using System.Threading.Tasks;
+using UnityEngine;
+
 namespace millionaire
 {
     public class QuizPresenter
@@ -21,12 +25,27 @@ namespace millionaire
 
         private void SelectHint(HintType selectedHint)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         private void SelectAnswer(AnswerType selectedAnswer)
         {
-            throw new System.NotImplementedException();
+            if (selectedAnswer == _model.Questions[_model._currentQuestionIndex].CorrectAnswer)
+            {
+                Debug.Log("Correct");
+                _ = ShowQuestionDelay();
+            }
+            else
+            {
+                Debug.Log("Wrong");
+            }
+        }
+        
+        private async Task ShowQuestionDelay()
+        {
+            await Task.Delay(2000);
+            _model._currentQuestionIndex++;
+            _view.ShowQuestion(_model.Questions[_model._currentQuestionIndex]);
         }
     }
 }
