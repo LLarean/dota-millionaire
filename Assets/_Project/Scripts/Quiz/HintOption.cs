@@ -1,20 +1,16 @@
 ﻿using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace millionaire
 {
     [RequireComponent(typeof(Button))]
-    public class AnswerOption : MonoBehaviour
+    public class HintOption : MonoBehaviour
     {
         [SerializeField] private Button _button;
-        [SerializeField] private TextMeshProUGUI _label;
-        [SerializeField] private AnswerType _type;
+        [SerializeField] private HintType _type;
         
-        public event Action<AnswerType> OnClicked;
-        
-        public void SetLabel(string label) => _label.text = label;
+        public event Action<HintType> OnClicked;
         
         private void Start() => _button.onClick.AddListener(OnClick);
 

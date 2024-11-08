@@ -23,14 +23,14 @@ namespace millionaire
         {
             if (selectedAnswer == _currentQuestion.RightAnswer)
             {
-                Debug.Log("Correct!");
+                _quizScreen.ShowCorrect();
             }
             else
             {
-                Debug.Log("Wrong!");
+                _quizScreen.ShowError();
             }
 
-            ShowNextQuestion();
+            // ShowNextQuestion();
         }
 
         private void ShowNextQuestion()

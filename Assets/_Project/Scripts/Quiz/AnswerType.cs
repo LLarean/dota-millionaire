@@ -7,4 +7,11 @@
         C,
         D,
     }
+
+    public enum HintType
+    {
+        FiftyFifty,
+        Friend,
+        People,
+    }
 }

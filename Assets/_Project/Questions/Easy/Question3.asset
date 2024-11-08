@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41100bd18b5295e4aadce6b2a5c827e1, type: 3}
   m_Name: Question3
   m_EditorClassIdentifier: 
-  Question: "\u0412\u043E\u043F\u0440\u043E\u04413"
+  Question: "\u041B\u0451\u0433\u043A\u0438\u0439 \u0432\u043E\u043F\u0440\u043E\u0441
+    3"
   AnswerA: "\u041E\u0442\u0432\u0435\u0442A"
   AnswerB: "\u041E\u0442\u0432\u0435\u0442B"
   AnswerC: "\u041E\u0442\u0432\u0435\u0442C(\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439)"
