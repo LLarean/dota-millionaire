@@ -19,6 +19,7 @@ namespace millionaire
         
         private AnswerType _currentAnswer;
 
+        public event Action<HintType> OnHintSelected;
         public event Action<AnswerType> OnAnswerSelected;
         
         public void ShowQuestionData(QuestionData questionData)
@@ -56,6 +57,24 @@ namespace millionaire
             
             result.ShowError();
         }
+        
+        public void ShowFiftyFifty(AnswerType correctAnswer)
+        {
+            ShowHint(correctAnswer);
+        }
+
+        public void ShowHint(AnswerType correctAnswer)
+        {
+            var result = correctAnswer switch  
+            {
+                AnswerType.A => _answerA,
+                AnswerType.B => _answerB,
+                AnswerType.C => _answerC,
+                AnswerType.D => _answerD,
+            };
+            
+            result.ShowHint();
+        }
 
         private void Start()
         {
@@ -77,6 +96,7 @@ namespace millionaire
 
         private void OnHintClicked(HintType hintType)
         {
+            OnHintSelected?.Invoke(hintType);
         }
     }
 }

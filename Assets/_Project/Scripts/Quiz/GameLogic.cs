@@ -15,6 +15,7 @@ namespace millionaire
         
         private void Start()
         {
+            _quizScreen.OnHintSelected += OnHintSelected;
             _quizScreen.OnAnswerSelected += OnAnswerSelected;
             ShowNextQuestion();
         }
@@ -31,6 +32,18 @@ namespace millionaire
             }
 
             // ShowNextQuestion();
+        }
+
+        private void OnHintSelected(HintType hintType)
+        {
+            if (hintType == HintType.FiftyFifty)
+            {
+                _quizScreen.ShowFiftyFifty(_currentQuestion.RightAnswer);
+            }
+            else
+            {
+                _quizScreen.ShowHint(_currentQuestion.RightAnswer);
+            }
         }
 
         private void ShowNextQuestion()
